@@ -40,3 +40,4 @@ gem "bootstrap-sass", ">= 2.0.4.0"
 gem 'devise'
 gem 'backbone-on-rails'
 gem 'will_paginate'
+gem "coffeebeans"

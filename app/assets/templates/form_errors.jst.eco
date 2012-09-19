@@ -1,0 +1,17 @@
+<div class="row-fluid">
+		<div class="span11">
+			<div class="alert alert-block alert-error fade in">
+				<a href="#" data-dismiss="alert" class="close">×</a>
+				<h4 class="alert-heading">Ralat untuk meyimpan data</h4>
+    			<div id="my_error_msg" class="my_error_msg">	
+    				<ul>
+    					<% for attribute, messages of @errors: %>
+							<% for message in messages: %>
+								<li><!--<%= attribute %>--><%= message %></li>
+							<% end %>
+						<% end %>
+    				</ul>
+    			</div>
+			</div>
+		</div>
+</div>

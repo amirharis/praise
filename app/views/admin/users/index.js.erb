@@ -1,0 +1,14 @@
+$("#users").html("<%= escape_javascript(render('users')) %>");
+
+$(function() {
+  $("#selectall").click(function() {
+    return $(".case").attr("checked", this.checked);
+  });
+  return $(".case").click(function() {
+    if ($(".case").length === $(".case:checked").length) {
+      return $("#selectall").attr("checked", "checked");
+    } else {
+      return $("#selectall").removeAttr("checked");
+    }
+  });
+});

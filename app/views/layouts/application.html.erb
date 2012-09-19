@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Localhost Sdn. Bhd. http://www.localhost.my -->
+  <title>Praise</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+  <!--[if lte IE 8]>
+        <%= stylesheet_link_tag "ie/ie.css"%>
+        <%= javascript_include_tag "ie/respond.min.js", "ie/html5.js"%>
+  <![endif]-->
+  <%= csrf_meta_tags %>
+  <script>
+	//* hide all elements & show preloader
+	document.documentElement.className += 'js';
+  </script>
+</head>
+<body>
+	<div id="loading_layer" style="display:none">
+		<%= image_tag("img/ajax_loader.gif", :alt => "") %>
+    </div>
+	
+	<div id="maincontainer" class="clearfix">
+		<!-- header -->
+        <%= render 'header'%>
+        
+        <!-- main content -->
+        <div id="contentwrapper">
+            <div class="main_content">
+                <%= yield %>
+            </div>
+        </div>
+        
+		<!-- sidebar -->
+        <%= render 'sidebar'%> 
+       
+		<script>
+			$(document).ready(function() {
+				//* show all elements & remove preloader
+				setTimeout('$("html").removeClass("js")',1000);
+			});
+		</script>
+	
+	</div>
+</body>
+</html>

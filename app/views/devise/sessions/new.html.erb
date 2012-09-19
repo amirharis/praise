@@ -1,0 +1,14 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name),  :html => { :id => "login_form"} ) do |f| %>
+	<%= render :partial => "login_form", :locals => { :f => f } %>
+<% end %>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :id => "pass_form", :style => "display:none" }) do |f| %>
+	<%= render :partial => "reset_password_form", :locals => { :f => f } %>
+<% end %>
+
+<div class="links_b links_btm clearfix">
+	<span class="linkform" style="display:none">Never mind, <a href="#login_form">send me back to the sign-in screen</a></span>
+</div>
+
+
+<%#= render "devise/shared/links" %>

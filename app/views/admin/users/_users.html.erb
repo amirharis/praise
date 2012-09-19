@@ -1,0 +1,25 @@
+<table class="table table-bordered table-condensed">
+	<thead>
+		<tr>
+			<th>
+				<input id="selectall" name="check_all_users" type="checkbox" value="users" />
+			</th>
+			<th>Nama</th>
+			<th>No. Kad Pengenalan</th>
+			<th>Emel</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody class="users_list">
+		<% @users.each do |user| %>
+		<tr id="<%=user.id%>">
+			<td><input type="checkbox" value="<%=user.id%>" name="user[]" id="<%=user.id%>" class="case"></td>
+			<td><%= link_to user.name, "", :class => "show_user", :id => user.id , "data-id" => user.id %></td>
+			<td><%= user.ic_number %></td>
+			<td><%= user.email %></td>
+			<td>xx</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= will_paginate @users, :previous_label => '<<', :next_label => '>>', :class => 'user_pagination' %>

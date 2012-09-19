@@ -1,0 +1,55 @@
+
+<div class="row-fluid">
+	<div class="span12">
+		<a href="" id="admin_users_page"><i class="icon-circle-arrow-left"></i> Kembali ke laman sebelumnya</a>
+
+		<h3 class="heading">Profil pengguna
+		</h3>
+		<div class="row-fluid">
+			<div class="span8">
+				<form class="form-horizontal" accept-charset="UTF-8" id="update_user_form" >
+					<fieldset>
+						<div class="control-group formSep">
+							<label class="control-label">ID pengguna</label>
+							<div class="controls text_line">
+								<span id="user_id"><strong><%=@user.get('ic_number')%></strong></span>
+							</div>
+						</div>
+						
+						<div class="control-group formSep">
+							<label for="u_fname" class="control-label">Nama</label>
+							<div class="controls">
+								<input type="text" id="name" class="input-xlarge" value="<%=@user.get('name')%>" />
+							</div>
+						</div>
+
+						<div class="control-group formSep">
+							<label for="u_fname" class="control-label">No. K/P</label>
+							<div class="controls">
+								<input type="text" id="ic_number" class="input-xlarge" value="<%=@user.get('ic_number')%>" />
+							</div>
+						</div>
+
+						<div class="control-group formSep">
+							<label for="u_email" class="control-label">Emel</label>
+							<div class="controls">
+								<input type="text" id="email" class="input-xlarge" value="<%=@user.get('email')%>" />
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls">
+								<button class="btn btn-gebo" type="submit" id="submit">Kemaskini</button>
+								<button class="btn" id="change_password">Tukar kata laluan</button>
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal hide fade in" id="myModal2"></div>
+

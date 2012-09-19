@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   #:validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :ic_number, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :email, :ic_number, :password, :password_confirmation, :remember_me, :admin_ready_only
   # attr_accessible :title, :body
   validates :ic_number, :presence => {:message => "No. K/P wajib diisi" }, 
   			:uniqueness => {:message => "No K/P sudah didaftar" }

@@ -22,7 +22,15 @@ window.render_users_tmp = () ->
     async: false
     dataType: "html"
 
+window.bind_ajaxStart = ->
+  $("#modal_loading").ajaxStart ->
+    $(this).show(); 
+  .ajaxStop ->
+    $(this).hide();
+
 $ ->
+  bind_ajaxStart()
+
   $("#selectall").click ->
     $(".case").attr "checked", @checked
 
@@ -32,7 +40,6 @@ $ ->
     else
       $("#selectall").removeAttr "checked"
 
-$ ->
   $("#users th a, #users .user_pagination a").live "click", ->
     $.getScript @href
     false

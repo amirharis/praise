@@ -4,6 +4,11 @@
         <div class="container-fluid">
             <a class="brand" href="dashboard.html"><i class="icon-home icon-white"></i> PRAISE</a>
             <ul class="nav user_menu pull-right">
+                <li class="hidden-phone hidden-tablet">
+                    <div class="nb_boxes clearfix">
+                        <div id="modal_loading"><%= image_tag("img/ajax_loader.gif", :alt => "") %></div>
+                    </div>
+                </li>
                 <li class="divider-vertical hidden-phone hidden-tablet"></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> <%=current_user.ic_number%> <b class="caret"></b></a>

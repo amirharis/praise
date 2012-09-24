@@ -30,12 +30,14 @@
 //= require ./js/gebo_common
 //= require ./smoke
 //= require ./js/gebo_notifications
-//= require ./complexify/jquery.complexify.min.js
+//= require ./complexify/jquery.complexify.min
 //= require ./js/gebo_search
 //= require ./js/gebo_forms
 //= require underscore
 //= require backbone
 //= require custom
+//= require chosen.jquery.min
+//= require ./datatables/jquery.dataTables.min
 //
 //= require .//praise
 //

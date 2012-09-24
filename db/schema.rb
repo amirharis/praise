@@ -11,7 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120918024937) do
+ActiveRecord::Schema.define(:version => 20120920134512) do
+
+  create_table "divisions", :force => true do |t|
+    t.integer  "sector_id"
+    t.string   "division_name"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "sections", :force => true do |t|
+    t.integer  "division_id"
+    t.string   "section_name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "sectors", :force => true do |t|
+    t.string   "sector_name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "units", :force => true do |t|
+    t.integer  "section_id"
+    t.string   "unit_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

@@ -1,9 +1,10 @@
 module Admin
 	class UsersController < BaseController
 		def index
-			@users = User.paginate(:page => params[:page], :per_page => 5).order("created_at DESC")
+			@users = User.search(params[:search], params[:search_option]).paginate(:page => params[:page], :per_page => 5).order("created_at DESC")
     		respond_to do |format|
       		  format.html # index.html.erb
+      		  format.js 
       		  format.json { render json: @users }
     		end
 		end

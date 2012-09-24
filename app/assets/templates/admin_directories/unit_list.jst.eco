@@ -1,0 +1,29 @@
+<div class="my-heading">
+  Unit
+</div>
+
+<select data-placeholder="Pilih unit" class="units" style="width:350px;">
+	<option></option>
+	<% for unit in @units.models: %>
+		<option unit-id='<%= unit.get('id') %>' value='<%= unit.get('id') %>'><%= "#{unit.get('unit_name')}" %></option>
+	<% end %>
+</select>
+
+
+<a href="#" class="btn btn-primary" style="margin-bottom:10px;" id="create_unit"><i class="splashy-add_small"></i> Cipta unit</a>
+
+<div style="margin-top:-15px;margin-bottom:5px;">
+	<i class="splashy-arrow_large_down"></i>
+</div>
+
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">Akses pengguna</a></li>
+		<li><a href="#tab2" data-toggle="tab">test</a></li>
+	</ul>
+	<button class="btn btn-danger btn-mini" id="delete_unit" style="float: right; margin-top:-50px">
+			Padam
+	</button>
+	<div class="tab-conten">
+	</div>
+</div>

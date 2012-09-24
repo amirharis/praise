@@ -28,6 +28,31 @@ window.bind_ajaxStart = ->
   .ajaxStop ->
     $(this).hide();
 
+window.loadDt = ->
+  $("#dt_a").dataTable
+    sPaginationType: "bootstrap_alt"
+    iDisplayLength: 5
+    #sDom: '<"top"i>rt<"bottom"flp><"clear">'
+    oLanguage:
+      #sLengthMenu: "_MENU_"
+      sLengthMenu: '<select>'+
+        '<option value="5">5</option>'+
+        '<option value="10">10</option>'+
+        '<option value="20">20</option>'+
+        '<option value="-1">Semua</option>'+
+        '</select>'
+      sSearch: "Cari: "
+      sInfo: "Papar _START_ hingga _END_ dari _TOTAL_"
+      sEmptyTable: "Tiada rekod"
+      sInfoEmpty: "Tiada rekod"
+      sZeroRecords: "Rekod tidak dijumpai"
+      oPaginate:
+        sNext: ""
+        sLast: ""
+        sFirst: ""
+        sPrevious: ""
+
+
 $ ->
   bind_ajaxStart()
 
@@ -54,4 +79,9 @@ $ ->
     MyApp = new Backbone.Router()
     MyApp.navigate "admin/users/" + $(this).attr("id"),
       trigger: true
+
+  $('#users_table').dataTable
+    sPaginationType: "full_numbers"
+    bJQueryUI: true
+  
   

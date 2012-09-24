@@ -24,7 +24,7 @@
 		// //* 2col multiselect
 		// gebo_multiselect.init();
 		// //* enhanced select
-		// gebo_chosen.init();
+		//gebo_chosen.init();
 		// //* WYSIWG editor
   //       gebo_wysiwg.init();
   //       //* multiupload

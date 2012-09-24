@@ -27,15 +27,14 @@
 
 		<div class="span10">
 			<div style="margin-bottom:10px; float: right;">
-				<button class="btn btn-gebo" id="create_user">Tambah pengguna baru</button>
+				<button class="btn btn-gebo" id="create_user"><i class="splashy-add_small"></i> Tambah pengguna baru</button>
 			</div>
 		</div>
 	</div>
 
 
 	<div id="users"></div>
-
-	<div class="modal hide fade in" id="myModal2"></div>
+	
 <%else: %>
    	   <h3 class="heading">Pengguna Sistem</h3>
 <!--<div id="users_content"></div>-->
@@ -65,7 +64,7 @@
 
 		<div class="span10">
 			<div style="margin-bottom:10px; float: right;">
-				<button class="btn btn-gebo" id="create_user">Tambah pengguna baru</button>
+				<button class="btn btn-gebo" id="create_user"><i class="splashy-add_small"></i> Tambah pengguna baru</button>
 			</div>
 		</div>
 	</div>

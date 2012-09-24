@@ -11,4 +11,15 @@ $(function() {
       return $("#selectall").removeAttr("checked");
     }
   });
+
+  $(".show_user").click(function(e) {
+  var MyApp;
+  e.preventDefault();
+  MyApp = new Backbone.Router();
+  return MyApp.navigate("admin/users/" + $(this).attr("id"), {
+    trigger: true
+    });
+  });
+
 });
+

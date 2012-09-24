@@ -1,0 +1,21 @@
+<div class="modal-header">
+		<button class="close" data-dismiss="modal">×</button>
+		<h3>Tambah unit baru</h3>
+	</div>
+	<div class="modal-body">
+		<form accept-charset="UTF-8" id="create_unit_form" class="form-horizontal">
+			<fieldset>
+				<div class="control-group formSep">
+					<label for="unit_name" class="control-label">Nama Sektor</label>
+					<div class="controls">
+						<input type="text" id="unit_name" class="input-xlarge"/>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+
+	</div>
+	<div class="modal-footer">
+		<input class="btn btn-primary" id="submit" name="commit" type="submit" value="Simpan">
+		<a href="#" class="btn" data-dismiss="modal">Batal</a>
+	</div>

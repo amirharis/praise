@@ -7,3 +7,8 @@
   padding: 3px 2px;
   border: 2px solid red;
 }
+
+.my-heading {background:#F0F9FF;font-weight:700}
+.my-heading span {font-weight:100;font-size:11px;color:#666}
+.my-heading {border-top:1px dashed #dcdcdc}
+.my-heading {padding:8px;border-bottom:1px dashed #dcdcdc; margin-bottom: 15px}

@@ -17,6 +17,19 @@ Praise::Application.routes.draw do
         get :render_users
       end
     end
+
+    resources :directories do 
+      collection do 
+        get :sectors
+        get :divisions
+        get :sections
+        get :units
+        post :create_sector
+        post :create_division
+        post :create_section
+        post :create_unit
+      end
+    end
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

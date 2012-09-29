@@ -2,7 +2,7 @@ class Praise.Views.ChangePassword extends Backbone.View
 	template: JST['admin_users/change_password']
 
 	events:
-		'submit #submit_save_password': 'savePassword'
+		'submit': 'savePassword'
 
 	render: ->
 		$( @el ).html( @template(user: @options.user, user_id: @options.user_id) )

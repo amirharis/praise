@@ -2,8 +2,8 @@ class Praise.Views.SelfProfile extends Backbone.View
 	template: JST['user/self_profile']
 
 	events:
-		'submit #submit': 'saveData'
-		'submit #change_password': 'change_password'
+		'submit': 'saveData'
+		'click #change_password': 'change_password'
 
 	render: ->
 		#alert JSON.stringify(@user)

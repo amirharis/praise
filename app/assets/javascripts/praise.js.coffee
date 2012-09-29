@@ -7,7 +7,7 @@ window.Praise =
     new Praise.Routers.User()
     new Praise.Routers.AdminUsers()
     new Praise.Routers.AdminDirectories()
-    Backbone.history.start(pushState: true)
+    Backbone.history.start(pushState: true, hashChange: false)
 
 $(document).ready ->
   Praise.init()

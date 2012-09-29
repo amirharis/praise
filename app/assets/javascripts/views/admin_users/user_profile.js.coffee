@@ -3,7 +3,7 @@ class Praise.Views.UserProfile extends Backbone.View
 
 	events:
 		'click #admin_users_page': 'admin_users_page'
-		'click #submit': 'saveData'
+		'submit #submit': 'saveData'
 		'click #change_password': 'change_password'
 
 	initialize: ->

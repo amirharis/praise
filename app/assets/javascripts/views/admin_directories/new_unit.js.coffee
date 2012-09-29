@@ -2,7 +2,7 @@ class Praise.Views.NewUnit extends Backbone.View
 	template: JST['admin_directories/new_unit']
 
 	events:
-		'click #submit': 'saveData'
+		'submit #submit': 'saveData'
 
 	render: ->
 		$( @el ).html( @template() )

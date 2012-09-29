@@ -13,7 +13,6 @@
 				</div>
 			</fieldset>
 		</form>
-
 	</div>
 	<div class="modal-footer">
 		<input class="btn btn-primary" id="submit" name="commit" type="submit" value="Simpan">

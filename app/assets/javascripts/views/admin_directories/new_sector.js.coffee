@@ -2,6 +2,7 @@ class Praise.Views.NewSector extends Backbone.View
 	template: JST['admin_directories/new_sector']
 
 	events:
+		'click #submit': 'saveData'
 		'submit': 'saveData'
 
 	render: ->

@@ -3,6 +3,7 @@ class Praise.Views.NewUser extends Backbone.View
 
 	events:
 		#'click .cancel': 'closeForm'
+		'click #submit': 'saveData'
 		'submit': 'saveData'
 
 	render: ->
